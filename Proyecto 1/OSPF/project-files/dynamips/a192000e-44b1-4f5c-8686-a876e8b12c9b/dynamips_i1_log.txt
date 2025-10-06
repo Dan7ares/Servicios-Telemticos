@@ -1,0 +1,116 @@
+Sep 23 23:04:43.337 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Sep 23 23:04:43.339 HYPERVISOR: Started on IP = localhost, TCP port = 53780.
+Sep 23 23:04:43.542 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 23 23:04:43.542 HYPERVISOR: exec_cmd: hypervisor working_dir E:\Datos Fredy\OneDrive - Universidad Distrital Francisco José de Caldas\01. Semestre\03. Semestre\Telematicos\Simulacion GNS3\Vm1\project-files\dynamips 
+Sep 23 23:04:44.504 GENERAL: working_dir=E:\Datos Fredy\OneDrive - Universidad Distrital Francisco José de Caldas\01. Semestre\03. Semestre\Telematicos\Simulacion GNS3\Vm1\project-files\dynamips
+Sep 23 23:04:44.505 HYPERVISOR: exec_cmd: hypervisor working_dir E:\Datos Fredy\OneDrive - Universidad Distrital Francisco José de Caldas\01. Semestre\03. Semestre\Telematicos\Simulacion GNS3\Vm1\project-files\dynamips\c8a2b4bc-0791-451a-b33a-5e61eaa107e3 
+Sep 23 23:04:44.509 GENERAL: working_dir=E:\Datos Fredy\OneDrive - Universidad Distrital Francisco José de Caldas\01. Semestre\03. Semestre\Telematicos\Simulacion GNS3\Vm1\project-files\dynamips\c8a2b4bc-0791-451a-b33a-5e61eaa107e3
+Sep 23 23:04:44.509 HYPERVISOR: exec_cmd: vm create R1 1 c3725 
+Sep 23 23:04:44.567 VM: VM R1 created.
+Sep 23 23:04:44.569 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5000 
+Sep 23 23:04:44.569 HYPERVISOR: exec_cmd: c3725 get_mac_addr R1 
+Sep 23 23:04:44.570 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Sep 23 23:04:44.570 HYPERVISOR: exec_cmd: vm set_exec_area R1 64 
+Sep 23 23:04:44.571 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 23 23:04:44.571 HYPERVISOR: exec_cmd: vm set_idle_pc R1 0x60c09aa0 
+Sep 23 23:04:44.571 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/fredy/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+Sep 23 23:04:44.572 HYPERVISOR: exec_cmd: c3725 set_mac_addr R1 c201.5e1c.0000 
+Sep 23 23:04:44.573 HYPERVISOR: exec_cmd: vm set_nvram R1 256 
+Sep 23 23:04:44.573 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 23 23:04:44.573 HYPERVISOR: exec_cmd: vm slot_add_binding R1 1 0 NM-1FE-TX 
+Sep 23 23:04:44.574 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 23 23:04:44.574 HYPERVISOR: exec_cmd: vm slot_add_binding R1 2 0 NM-1FE-TX 
+Sep 23 23:04:53.495 HYPERVISOR: exec_cmd: nio create_udp udp-c4a7f267-d5f5-47d0-81d8-10b979559194 10010 127.0.0.1 10011 
+Sep 23 23:04:53.776 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-c4a7f267-d5f5-47d0-81d8-10b979559194 
+Sep 23 23:04:53.778 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 23 23:04:54.171 HYPERVISOR: exec_cmd: nio create_udp udp-5739c36f-855e-4470-b671-8ef23cbd8c3e 10016 127.0.0.1 10017 
+Sep 23 23:04:54.192 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 1 udp-5739c36f-855e-4470-b671-8ef23cbd8c3e 
+Sep 23 23:04:54.205 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 23 23:04:54.820 HYPERVISOR: exec_cmd: nio create_udp udp-526a06fe-743e-4459-9242-a23f37c77865 10028 127.0.0.1 10029 
+Sep 23 23:04:54.822 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 1 0 udp-526a06fe-743e-4459-9242-a23f37c77865 
+Sep 23 23:04:54.822 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 23 23:06:55.777 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/fredy/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+Sep 23 23:06:59.144 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/fredy/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+Sep 23 23:06:59.404 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/fredy/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+Sep 23 23:46:20.756 HYPERVISOR: exec_cmd: vm set_ghost_status R1 2 
+Sep 23 23:46:20.756 HYPERVISOR: exec_cmd: vm set_ghost_file R1 E:\Datos Fredy\OneDrive - Universidad Distrital Francisco José de Caldas\01. Semestre\03. Semestre\Telematicos\Simulacion GNS3\Vm1\project-files\dynamips\c3725-adventerprisek9-mz.124-15.T14.image-128.ghost 
+Sep 23 23:46:20.758 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 23 23:46:20.758 HYPERVISOR: exec_cmd: vm set_config R1 configs\i1_startup-config.cfg 
+Sep 23 23:46:20.758 HYPERVISOR: exec_cmd: vm start R1 
+Sep 23 23:46:51.109 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 23 23:46:51.143 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 23 23:50:21.113 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 23 23:50:21.124 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 23 23:50:51.113 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 23 23:50:51.122 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 23 23:58:51.176 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 23 23:58:51.187 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 23 23:59:21.175 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 23 23:59:21.191 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:01:21.176 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:01:21.187 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:13:41.694 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 24 00:13:41.696 HYPERVISOR: exec_cmd: vm stop R1 
+Sep 24 00:13:41.776 VM: VM R1 shutdown.
+Sep 24 00:13:41.777 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:13:43.906 HYPERVISOR: exec_cmd: vm set_ghost_status R1 2 
+Sep 24 00:13:43.907 HYPERVISOR: exec_cmd: vm set_ghost_file R1 E:\Datos Fredy\OneDrive - Universidad Distrital Francisco José de Caldas\01. Semestre\03. Semestre\Telematicos\Simulacion GNS3\Vm1\project-files\dynamips\c3725-adventerprisek9-mz.124-15.T14.image-128.ghost 
+Sep 24 00:13:43.907 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 24 00:13:43.910 HYPERVISOR: exec_cmd: vm set_config R1 configs\i1_startup-config.cfg 
+Sep 24 00:13:43.910 HYPERVISOR: exec_cmd: vm start R1 
+Sep 24 00:14:14.391 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:14:14.403 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:21:50.921 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 24 00:21:50.921 HYPERVISOR: exec_cmd: vm slot_disable_nio R1 0 0 
+Sep 24 00:21:50.940 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R1 0 0 
+Sep 24 00:21:50.943 HYPERVISOR: exec_cmd: nio delete udp-c4a7f267-d5f5-47d0-81d8-10b979559194 
+Sep 24 00:21:55.471 HYPERVISOR: exec_cmd: nio create_udp udp-60833a92-9cac-4088-9477-bffbef249504 10010 127.0.0.1 10011 
+Sep 24 00:21:55.489 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-60833a92-9cac-4088-9477-bffbef249504 
+Sep 24 00:21:55.489 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 24 00:21:55.489 HYPERVISOR: exec_cmd: vm slot_enable_nio R1 0 0 
+Sep 24 00:24:47.458 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/fredy/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+Sep 24 00:25:14.467 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:25:14.476 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:26:15.335 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 24 00:26:15.335 HYPERVISOR: exec_cmd: vm slot_disable_nio R1 0 0 
+Sep 24 00:26:15.336 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R1 0 0 
+Sep 24 00:26:15.337 HYPERVISOR: exec_cmd: nio delete udp-60833a92-9cac-4088-9477-bffbef249504 
+Sep 24 00:26:28.211 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 24 00:26:28.211 HYPERVISOR: exec_cmd: vm stop R1 
+Sep 24 00:26:28.320 VM: VM R1 shutdown.
+Sep 24 00:26:28.322 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:26:28.962 HYPERVISOR: exec_cmd: vm set_ghost_status R1 2 
+Sep 24 00:26:28.963 HYPERVISOR: exec_cmd: vm set_ghost_file R1 E:\Datos Fredy\OneDrive - Universidad Distrital Francisco José de Caldas\01. Semestre\03. Semestre\Telematicos\Simulacion GNS3\Vm1\project-files\dynamips\c3725-adventerprisek9-mz.124-15.T14.image-128.ghost 
+Sep 24 00:26:28.963 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 24 00:26:28.964 HYPERVISOR: exec_cmd: vm set_config R1 configs\i1_startup-config.cfg 
+Sep 24 00:26:28.965 HYPERVISOR: exec_cmd: vm start R1 
+Sep 24 00:26:59.254 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:26:59.270 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:33:36.071 HYPERVISOR: exec_cmd: nio create_udp udp-4223849f-f280-4464-bce6-6d53e56b2519 10010 127.0.0.1 10011 
+Sep 24 00:33:36.074 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-4223849f-f280-4464-bce6-6d53e56b2519 
+Sep 24 00:33:36.074 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 24 00:33:36.074 HYPERVISOR: exec_cmd: vm slot_enable_nio R1 0 0 
+Sep 24 00:36:29.478 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:36:29.490 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:39:29.543 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:39:29.555 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:39:59.553 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:39:59.563 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:40:14.353 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 24 00:40:14.353 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R1 0 1 
+Sep 24 00:40:14.381 HYPERVISOR: exec_cmd: nio delete udp-5739c36f-855e-4470-b671-8ef23cbd8c3e 
+Sep 24 00:40:14.411 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 24 00:40:14.411 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R1 1 0 
+Sep 24 00:40:14.443 HYPERVISOR: exec_cmd: nio delete udp-526a06fe-743e-4459-9242-a23f37c77865 
+Sep 24 00:40:14.523 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 24 00:40:14.523 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R1 0 0 
+Sep 24 00:40:14.536 HYPERVISOR: exec_cmd: nio delete udp-4223849f-f280-4464-bce6-6d53e56b2519 
+Sep 24 00:40:14.643 HYPERVISOR: exec_cmd: vm get_status R1 
+Sep 24 00:40:14.643 HYPERVISOR: exec_cmd: vm stop R1 
+Sep 24 00:40:14.663 VM: VM R1 shutdown.
+Sep 24 00:40:14.665 HYPERVISOR: exec_cmd: vm extract_config R1 
+Sep 24 00:40:14.666 HYPERVISOR: exec_cmd: vm delete R1 
+Sep 24 00:40:14.666 VM: VM R1 destroyed.
+Sep 24 00:40:14.668 HYPERVISOR: exec_cmd: hypervisor stop 
+Sep 24 00:40:14.973 HYPERVISOR: Stopped.
+Sep 24 00:40:14.973 GENERAL: reset done.

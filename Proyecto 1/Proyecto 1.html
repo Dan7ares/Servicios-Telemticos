@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Explora Destinos - Viajes</title>
+  <style>
+    :root { --max-width: 900px; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 200vh;
+      background: #e9eef2;
+    }
+
+    .fondo-parallax {
+      background-image: url("4.webp"); /* fondo local (ajusta nombre/ubicación) */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 40px;
+    }
+
+    h1 {
+      margin: 0 0 20px 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+      z-index: 2;
+      position: relative;
+      text-align: center;
+      padding: 0 12px;
+    }
+
+    .carousel-container {
+      width: 80%;
+      max-width: var(--max-width);
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      background: #fff;
+      position: relative;
+      transition: height 0.45s ease;
+      z-index: 2;
+    }
+
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      will-change: transform;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      position: relative;
+      text-align: center;
+      color: white;
+      user-select: none;
+      -webkit-user-select: none;
+      overflow: hidden; /* asegura que los bordes redondeados clipsen la imagen/leyenda */
+    }
+
+    /* El enlace envuelve la imagen y la caption */
+    .slide-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative; /* permite que caption absoluto se posicione respecto al .carousel-item */
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .carousel-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      font-size: 1.1rem;
+      color: #fff;
+      border-radius: 0 0 12px 12px;
+      transition: top 0.35s ease;
+      box-sizing: border-box;
+      pointer-events: none; /* evita que la caption interfiera con el clic en el enlace */
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.9rem;
+      background: rgba(0,0,0,0.45);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 14px;
+      border-radius: 50%;
+      z-index: 3;
+    }
+    .prev { left: 12px; }
+    .next { right: 12px; }
+
+    .carousel-btn:focus { outline: 2px solid #fff; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.6rem; padding: 0 10px; }
+      .carousel-caption { font-size: 1rem; padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="fondo-parallax">
+    <h1>🌍 Explora, Viaja, Descubre 🌍</h1>
+
+    <div class="carousel-container" id="carousel-container" aria-live="polite">
+      <div class="carousel" id="carousel">
+        <!-- Slide 1: cambia href por la URL que quieras -->
+        <div class="carousel-item">
+          <a class="slide-link" href="https://www.kayak.com.co/vuelos/Colombia-CO0/Cartagena-de-Indias-Aeropuerto-Internacional-Rafael-Nunez-CTG?sck=SEM&skipapp=true&gclid=Cj0KCQjwrc7GBhCfARIsAHGcW5WGNMvBFkFNB-28gGDbnvfssUyB7u8RW35JWAAk4hhl_YTfnGywpt4aAgltEALw_wcB" target="_blank" rel="noopener noreferrer" aria-label="Abrir Cartagena">
+            <img src="1.jpg" alt="Cartagena - La ciudad amurallada">
+            <div class="carousel-caption">Colombia - Cartagena "La ciudad Amurallada"</div>
+          </a>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <a class="slide-link" href="https://www.kayak.com.co/vuelos/Colombia-CO0/Medellin-Aeropuerto-Internacional-Jose-Maria-Cordova-MDE?sck=SEM&skipapp=true&gclid=Cj0KCQjwrc7GBhCfARIsAHGcW5WlHFNicVUs-E8mKCLmsQuqrIj6g5UYh2-muXH8dtGSJfUX86wAp8IaAvX_EALw_wcB" target="_blank" rel="noopener noreferrer" aria-label="Abrir Guatapé">
+            <img src="1.avif" alt="Guatapé - La piedra del Peñol">
+            <div class="carousel-caption">Colombia - Guatapé "La piedra del Peñol"</div>
+          </a>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <a class="slide-link" href="https://www.expedia.com/es/Vuelos-Baratos-Zipaquira.d6160081.Guia-de-vuelos" target="_blank" rel="noopener noreferrer" aria-label="Abrir Zipaquirá">
+            <img src="2.jpg" alt="Zipaquirá - Catedral de sal">
+            <div class="carousel-caption">Colombia - Zipaquirá "Catedral de sal"</div>
+          </a>
+        </div>
+      </div>
+
+      <button class="carousel-btn prev" id="prevBtn" aria-label="Anterior">❮</button>
+      <button class="carousel-btn next" id="nextBtn" aria-label="Siguiente">❯</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousel = document.getElementById('carousel');
+      const container = document.getElementById('carousel-container');
+      const items = Array.from(document.querySelectorAll('.carousel-item'));
+      const images = items.map(i => i.querySelector('img'));
+      const total = items.length;
+      let index = 0;
+
+      function ajustarAlturaParaIndice(i) {
+        const item = items[i];
+        const img = item.querySelector('img');
+        const caption = item.querySelector('.carousel-caption');
+
+        function aplicar() {
+          const imgRect = img.getBoundingClientRect();
+          const height = Math.round(imgRect.height);
+          if (height > 0) {
+            container.style.height = height + 'px';
+            caption.style.top = (height - caption.offsetHeight) + 'px';
+            console.log('[carousel] altura ajustada a', height, 'px para índice', i);
+          } else {
+            setTimeout(aplicar, 80);
+          }
+        }
+
+        if (img.complete && img.naturalHeight) {
+          aplicar();
+        } else {
+          img.addEventListener('load', aplicar, { once: true });
+          img.addEventListener('error', () => {
+            console.error('[carousel] Error cargando imagen:', img.src);
+            container.style.height = '300px';
+          }, { once: true });
+        }
+      }
+
+      function mover(direccion) {
+        index = (index + direccion + total) % total;
+        carousel.style.transform = `translateX(${-index * 100}%)`;
+        ajustarAlturaParaIndice(index);
+      }
+
+      document.getElementById('prevBtn').addEventListener('click', (e) => { e.stopPropagation(); mover(-1); });
+      document.getElementById('nextBtn').addEventListener('click', (e) => { e.stopPropagation(); mover(1); });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') mover(-1);
+        if (e.key === 'ArrowRight') mover(1);
+      });
+
+      carousel.addEventListener('transitionend', () => ajustarAlturaParaIndice(index));
+      window.addEventListener('resize', () => ajustarAlturaParaIndice(index));
+
+      images.forEach((img, i) => {
+        if (img.complete && img.naturalHeight) {
+          if (i === index) ajustarAlturaParaIndice(index);
+        } else {
+          img.addEventListener('load', () => {
+            if (i === index) ajustarAlturaParaIndice(index);
+          });
+          img.addEventListener('error', () => {
+            console.error('[preload] error cargando imagen local:', img.src);
+          });
+        }
+      });
+
+      setTimeout(() => ajustarAlturaParaIndice(index), 80);
+    });
+  </script>
+</body>
+</html>
